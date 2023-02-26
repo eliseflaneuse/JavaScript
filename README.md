@@ -2,7 +2,7 @@
 Intermediate and Advanced Portions of JavaScript Algorithms and Data Structures freeCodeCamp course
 
 <h2>functionalProgramming</h2>
-/*
-1. Understand Functional Programming Terminology
+
+1. Understand Functional Programming Terminology <br>
 2. Understand the Hazards of Using Imperative Code
-*/
+
