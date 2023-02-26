@@ -28,11 +28,8 @@ Syllabus:
 1. Understand Functional Programming Terminology
 2. Understand the Hazards of Using Imperative Code
 3. Avoid Mutations and Side Effects Using Functional Programming
+4. Pass Arguments to Avoid External Dependence in a Function
 */
-
-
-
-
 
 
 // 1. Understand Functional Programming Terminology
@@ -139,4 +136,21 @@ let fixedValue = 4;
 function incrementer() {
   let newValue = fixedValue + 1;
   return newValue; // If we wrote return fixedValue += 1 we would be changing the global variable, thus causing a mutation.
+}
+
+// 4. Pass Arguments to Avoid External Dependence in a Function
+/* 
+As you could´ve notive in step number 3 we were closer to functional programming principles, but there is still something missing.
+
+We didn't alter the global variable value, but the function incrementer would not work without the global variable fixedValue being there.
+
+Another principle of functional programming is to always declare your dependencies explicitly. 
+This means if a function depends on a variable or object being present, then pass that variable or object directly into the function as an argument.
+*/
+
+// So this version of incrementer is better, because the function clearly declare its dependencies.
+
+function incrementer2(arg) {
+   let newValue = arg + 1;
+   return newValue; 
 }
